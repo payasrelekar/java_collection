@@ -7,7 +7,7 @@ import java.util.List;
 public class PrintUtil {
     public void printRecords(List<Book> records) {
         for(Book i:records) {
-            System.out.println(i);
+            System.out.println(i+"\n");
         }
     }
 }
