@@ -5,7 +5,7 @@ import java.util.List;
 
 public class StoreUtil<T> {
 
-    List<T> records = new ArrayList<>();
+    private List<T> records = new ArrayList<>();
 
     public void addRecords(T b) {
         this.records.add(b);

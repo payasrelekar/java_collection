@@ -31,7 +31,7 @@ public class libraryMain {
         List<Book> temp = new ArrayList<>(shelf.getRecords());
 
         //Sort books by Name
-        Collections.sort(temp, new CompareBookByName());
+        temp.sort(new CompareBookByName());
         //Print books Sorted By Name
         System.out.println("****Sorted By NAME****");
         //Print through new object of PrintRecords
@@ -39,7 +39,7 @@ public class libraryMain {
         System.out.print("\n");
 
         //Sort books by Price
-        Collections.sort(temp, new CompareBookByPrice());
+        temp.sort(new CompareBookByPrice());
         //Print books Sorted By Price
         System.out.println("****Sorted By PRICE****");
         //Print through new object of PrintRecords
@@ -48,8 +48,8 @@ public class libraryMain {
     }
 
     //Generate a random character sequence up to 8 letters
-    public static String genName() {
-        StringBuffer name = new StringBuffer();
+    private static String genName() {
+        StringBuilder name = new StringBuilder();
 
         //Insert a Random capital Letter first
         name.append((char)(genRandomNo(25)+'A'));
@@ -63,7 +63,7 @@ public class libraryMain {
     }
 
     //Generate a list of random Author names up to 4 authors
-    public static Set<String> genAuthList() {
+    private static Set<String> genAuthList() {
         Set<String> authors = new TreeSet<>();
 
         //Randomize author list length up to 4 authors
@@ -74,7 +74,7 @@ public class libraryMain {
     }
 
     //Generate random number up to max
-    public static int genRandomNo(int max) {
+    private static int genRandomNo(int max) {
         return (int)(Math.random()*max);
     }
 }
