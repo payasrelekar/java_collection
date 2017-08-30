@@ -11,10 +11,8 @@ public class Book {
 
     //Constructors
     public Book() {
-        this.id = 0;
-        this.name = "Unknown Book";
-        this.authors.add("Unknown Authors");
-        this.price = 0;
+        //Call parametrized constructor with default values
+        this(0, "Unknown Book", new TreeSet<String>(), 0);
     }
 
     public Book(int id, String name, Set<String> authors, int price) {
